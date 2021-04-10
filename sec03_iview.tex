@@ -1,6 +1,7 @@
+
 \section{The iview system}
-In this section we present the \textit{iview} free-viewpoint video
-system (www.bbc.co.uk/rd/iview) which enables the production of novel desirable camera views such as 
+In this section we present the DTI-funded collaborative project \textit{iview} \cite{iview_project},
+a free-viewpoint video system which enables the production of novel desirable camera views such as 
 the goal keeper view, the referee view or even the ball camera.
 This system exploits the already placed live TV broadcast cameras as the primary
 source of multiple view video.
@@ -76,10 +77,30 @@ The process is repeated until the resulting segmentation is satisfying.
 A deeper explanation is present in the paper \cite{iview2.1} where the authors present and evaluate also 
 \textit{Fast green subtraction} and keying in HSV.
 
+The accumulation of errors from calibration and matting can cause large errors in
+the reconstruction of the scene such as loss of limbs. 
+Therefore, robust algorithms have been developed for scene reconstruction.
+One possible technique is called visual-hull (VH) and represents the maximum volume occupied by an object
+given a set of silhouettes from multiple views [2.2:8].
+The visual-hull is a single global representation integrating silhouette information from all
+views. A polygonal mesh surface is typically extracted and texture mapped by resampling
+the captured multiple view video for rendering [2.2].
+Due to accumulating errors in camera calibration and segmentation, visual-hull accuracy is reduced.
+A refinement of the view-dependent visual hull (VDVH) [2.1:12]
+using stereo correspondence to interpolate between captured
+views can be used to overcome these issues achieving the best alignment between adjacent views and 
+hence improve visual quality.
+More information about \textit{iview} 3D reconstruction can be found in [2,2.1,2.2].
 
+Finally, the replay module renders the novel view of the scene using the computed 3D model together with the
+original camera images.
+Cameras closer to the virtual viewpoint are chosen to generate the novel viewpoint.
+% TODO: può essere descritto maggiormente the replay module 
 
-Aperture correction is also applied to each video sequence to correct for the camera edge enhancement
-used in standard broadcast footage \cite{iview}.
+% TODO: risultati, conclusioni
+
+% Aperture correction is also applied to each video sequence to correct for the camera edge enhancement
+% used in standard broadcast footage \cite{iview}.
 
 % Likewise matting in relatively uncontrolled outdoor conditions with changing illu-
 % mination achieves a segmentation within 1-2 pixels of the true foreground with the
