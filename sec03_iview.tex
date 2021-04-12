@@ -58,7 +58,7 @@ Camera synchronisation is achieved using standard genlock process.
 
 The processing module computes a 3D model of the scene.
 This is done using segmentation of objects from the back-
-ground and 3D reconstruction \cite{iview2.1}.
+ground and 3D reconstruction \cite{2.1_iview}.
 
 In order to allow the use of footage from match cameras and to avoid the need for prior calibration, 
 automatic calibration of all cameras is performed using a line-based approach againts the pitch lines of the captured footage, 
@@ -74,7 +74,7 @@ The authors developed and tested a k-nearest neighbour approach for chroma-keyin
 The k-nearest neighbour classifier is controlled by a GUI where the user has to click on position in the image that correspond
 to background. 
 The process is repeated until the resulting segmentation is satisfying.
-A deeper explanation is present in the paper \cite{iview2.1} where the authors present and evaluate also 
+A deeper explanation is present in the paper \cite{2.1_iview} where the authors present and evaluate also 
 \textit{Fast green subtraction} and keying in HSV.
 
 The accumulation of errors from calibration and matting can cause large errors in

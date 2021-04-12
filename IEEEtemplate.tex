@@ -2,6 +2,8 @@
 \IEEEoverridecommandlockouts
 % The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
 \usepackage{cite}
+\usepackage{url}
+\usepackage[english]{babel}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
@@ -12,7 +14,7 @@
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
 
-\title{Paper Title*\\
+\title{Free-viewpoint video synthesis for soccer games\\
 % {\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and
 % should not be used}
 % \thanks{Identify applicable funding agency here. If none, delete this.}
@@ -28,10 +30,10 @@ davide.lusuardi@studenti.unitn.it}
 \maketitle
 
 \begin{abstract}
-In this document, we discuss some methods to accomplish free-viewpoint video visualisation for soccer scenes.
+In this document, we discuss some methods to accomplish free-viewpoint video visualization for soccer scenes.
 These methods generate novel views of actions from any angle and allow viewers to virtually fly through real soccer scenes.
 % TODO: complete
-% and is of interest for visualisation in TV productions.
+% and is of interest for visualization in TV productions.
 \end{abstract}
 
 % \begin{IEEEkeywords}
@@ -41,8 +43,7 @@ These methods generate novel views of actions from any angle and allow viewers t
 \input{sec01.tex}
 
 \section{Overview}
-In the field of computer vision, the techniques for syn-
-thesizing virtual view images from a number of real camera
+In the field of computer vision, the techniques for synthesizing virtual view images from a number of real camera
 images have been studied since the 1990s \cite{b1,b2,b3}.
 % Free-viewpoint video in soccer TV broadcast
 % production 
@@ -75,6 +76,7 @@ a sporting match. TODO
 \input{sec05_billboard.tex}
 
 
+
 \section*{Acknowledgment}
 
 The preferred spelling of the word ``acknowledgment'' in America is without 
@@ -104,7 +106,11 @@ For papers published in translation journals, please give the English
 citation first, followed by the original foreign-language citation \cite{b6}.
 
 
-\input{biblio.tex}
+% \input{biblio.tex}
+
+\bibliographystyle{IEEEtran}
+\bibliography{biblio.bib}
+
 
 
 \end{document}

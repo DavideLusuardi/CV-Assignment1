@@ -5,3 +5,6 @@
 *.synctex.gz
 *.bcf
 *.run.xml
+*.bbl
+*.blg
+*.bst

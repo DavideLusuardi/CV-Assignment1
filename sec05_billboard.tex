@@ -1,5 +1,5 @@
 \section{Billboard-based visualization}
-In this section we present the work of Ohta et al. \cite{billboard}.
+In this section we present the work of Ohta et al. \cite{03_billboard}.
 The authors use billboard representation to make a 3D model of each player.
 This method is simpler than full 3D reconstruction and require less computation.
 A player billboard is a small rectangle standing perpendicular to the ground
@@ -9,6 +9,24 @@ the visual difference is clear at a close viewpoint but becomes very small at a 
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[scale=0.22]{billboard_comparison.png}}
-\caption{Appearance similarity between 3D reconstruction and billboard in close and distant view \cite{billboard}}
+\caption{Appearance similarity between 3D reconstruction and billboard in close and distant view \cite{03_billboard}}
 \label{fig:billboard_comparison}
 \end{figure}
+
+
+The system proceed as follow: first extracts texture segments from camera videos, then selects appropriate textures according
+to the virtual viewpoint and finally layouts the player billboards in virtual space.
+Texture extraction phase consists in obtaining location of each player and extracting texture segments from every image 
+video by projecting player location onto the image plane.
+Background region is removed in the texture by video capturing PC.
+Texture selection phase selects a set of texture to be sent to each viewer based on his viewpoint. 
+Given a viewpoint, the system finds the camera that minimizes the angle between the line from the viewpoint to the player 
+location and the line from the camera to the player location.
+
+One possible problem happens when players are overlapped each other at a certain camera and billboard texture could include both
+players.
+To eliminate extra player region, authors used stereo based method \cite{billboard:4_TODO} as explained in \cite{03_billboard}. 
+% TODO: can be explained more
+% In this system, the process to realize a novel viewpoint consists of five steps: video capturing, texture extraction,
+% texture selection... TODO
+
