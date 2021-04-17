@@ -30,8 +30,11 @@ davide.lusuardi@studenti.unitn.it}
 \maketitle
 
 \begin{abstract}
-In this document, we discuss some methods to accomplish free-viewpoint video visualization for soccer scenes.
-These methods generate novel views of actions from any angle and allow viewers to virtually fly through real soccer scenes.
+This paper presents some methods for free viewpoint synthesis that generate novel views of actions from any angle and 
+allows viewers to virtually fly through real soccer scenes.
+
+% In this document, we discuss some methods to accomplish free-viewpoint video visualization for soccer scenes.
+% These methods generate novel views of actions from any angle and allow viewers to virtually fly through real soccer scenes.
 % TODO: complete
 % and is of interest for visualization in TV productions.
 \end{abstract}
@@ -40,33 +43,8 @@ These methods generate novel views of actions from any angle and allow viewers t
 % component, formatting, style, styling, insert
 % \end{IEEEkeywords}
 
-\input{sec01.tex}
-
-\section{Overview}
-In the field of computer vision, the techniques for synthesizing virtual view images from a number of real camera
-images have been studied since the 1990s \cite{b1,b2,b3}.
-% Free-viewpoint video in soccer TV broadcast
-% production 
-% The requirements for free-viewpoint video in sports TV broadcast
-% production
-Free-viewpoint video in sports TV broadcast production is a challenging problem involving the conflicting requirements of 
-broadcast picture quality with video-rate generation.
-FVV techniques for generating novel viewpoints using a multiview camera setup can be catogorized into two classes: 
-3D reconstruction and image-based rendering. Using 3D reconstruction, it is possible to construct 3D models of objects to
-generate the desired view from an arbitrary viewpoint. The quality of the virtual view image generated
-by these methods depends on the accuracy of the 3D model. In order to produce an accurate model, a
-large number of video cameras surrounding the object are used. Moreover, ... TODO:01
-% Furthermore,
-% camera calibration [13] is usually required to relate 2-D co-
-% ordinates in images to their corresponding 3-D coordinates in
-% object space. As it is essential to measure the 3-D positions of
-% several points in the object space, calibration becomes difficult
-% especially in a large space. For these reasons, the object area is
-% generally limited to a few cubic meters in this approach.
-
-It is not practical to apply these methods to a scene that
-contains multiple objects with complicated movements such as
-a sporting match. TODO
+\input{sec01_introduction.tex}
+\input{sec02_overview.tex}
 
 
 \input{sec03_iview.tex}
@@ -78,35 +56,12 @@ a sporting match. TODO
 
 
 \section*{Acknowledgment}
-
+TODO
 The preferred spelling of the word ``acknowledgment'' in America is without 
 an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
 G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
 acknowledgments in the unnumbered footnote on the first page.
 
-\section*{References}
-
-Please number citations consecutively within brackets \cite{b1}. The 
-sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
-number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
-the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
-
-Number footnotes separately in superscripts. Place the actual footnote at 
-the bottom of the column in which it was cited. Do not put footnotes in the 
-abstract or reference list. Use letters for table footnotes.
-
-Unless there are six authors or more give all authors' names; do not use 
-``et al.''. Papers that have not been published, even if they have been 
-submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
-that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
-Capitalize only the first word in a paper title, except for proper nouns and 
-element symbols.
-
-For papers published in translation journals, please give the English 
-citation first, followed by the original foreign-language citation \cite{b6}.
-
-
-% \input{biblio.tex}
 
 \bibliographystyle{IEEEtran}
 \bibliography{biblio.bib}

@@ -1,11 +1,10 @@
 
 \section{The iview system}
 In this section we present the DTI-funded collaborative project \textit{iview} \cite{iview_project},
-a free-viewpoint video system which enables the production of novel desirable camera views such as 
-the goal keeper view, the referee view or even the ball camera.
+a free-viewpoint video system which enables the production of novel desirable camera views.
 This system exploits the already placed live TV broadcast cameras as the primary
 source of multiple view video.
-Usually football matches are covered by 12-20 high-definition cameras placed all over in the stadium
+Usually, football matches are covered by 12-20 high-definition cameras placed all over in the stadium
 providing wide-baseline views.
 Match cameras are manually controlled to follow the game play zooming in on events when occurs.
 However, only a fraction of these are focused on specific events of interest and can be used for production 
@@ -49,7 +48,7 @@ of free-viewpoint renders, the remaining cameras cover the pitch, crowd and coac
 
 
 The \textit{iview} system is composed of three main modules as shown in Figure \ref{fig:iview_overview}: 
-capture, processing, and replay module.
+capture, processing and replay module.
 
 Capture is performed using time synchronised acquisition from both auxiliary and
 match cameras.
@@ -71,33 +70,38 @@ Matting of players from the green pitch is performed using chroma-keying matting
 % This allows the approximate segmentation of the foreground players for subsequent processing to produce free-viewpoint video. 
 The authors developed and tested a k-nearest neighbour approach for chroma-keying and evaluated two other known techniques,
 \textit{Fast green subtraction} in RGB colour space and keying in HSV colour space.
-The k-nearest neighbour classifier is controlled by a GUI where the user has to click on position in the image that correspond
-to background. 
+The k-nearest neighbour classifier is controlled by a GUI where the user has to click on position in the image that corresponds
+to the background. 
 The process is repeated until the resulting segmentation is satisfying.
 A deeper explanation is present in the paper \cite{2.1_iview} where the authors present and evaluate also 
 \textit{Fast green subtraction} and keying in HSV.
 
 The accumulation of errors from calibration and matting can cause large errors in
-the reconstruction of the scene such as loss of limbs. 
+the reconstruction of the scene, such as loss of limbs. 
 Therefore, robust algorithms have been developed for scene reconstruction.
 One possible technique is called visual-hull (VH) and represents the maximum volume occupied by an object
-given a set of silhouettes from multiple views [2.2:8].
+given a set of silhouettes from multiple views \cite{2.2_iview_08}.
 The visual-hull is a single global representation integrating silhouette information from all
 views. A polygonal mesh surface is typically extracted and texture mapped by resampling
-the captured multiple view video for rendering [2.2].
+the captured multiple view video for rendering \cite{2.2_iview}.
 Due to accumulating errors in camera calibration and segmentation, visual-hull accuracy is reduced.
-A refinement of the view-dependent visual hull (VDVH) [2.1:12]
+A refinement of the view-dependent visual hull (VDVH) \cite{2.1_iview_12}
 using stereo correspondence to interpolate between captured
 views can be used to overcome these issues achieving the best alignment between adjacent views and 
 hence improve visual quality.
-More information about \textit{iview} 3D reconstruction can be found in [2,2.1,2.2].
+More information about \textit{iview} 3D reconstruction can be found in \cite{02_iview,2.1_iview,2.2_iview}.
 
 Finally, the replay module renders the novel view of the scene using the computed 3D model together with the
 original camera images.
 Cameras closer to the virtual viewpoint are chosen to generate the novel viewpoint.
 % TODO: può essere descritto maggiormente the replay module 
 
-% TODO: risultati, conclusioni
+
+The method proposed achieves an image quality comparable to that of the input images and it is robust to the
+wide-baseline moving camera views at different resolutions.
+Calibration and segmentation are very important in order to obtain an overall good quality of the system.
+Degradation in image quality will also occur if there are insufficients views for reconstruction.
+% TODO: si può aggiungere contenuto
 
 % Aperture correction is also applied to each video sequence to correct for the camera edge enhancement
 % used in standard broadcast footage \cite{iview}.
