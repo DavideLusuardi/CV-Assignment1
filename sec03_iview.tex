@@ -42,7 +42,7 @@ of free-viewpoint renders, the remaining cameras cover the pitch, crowd and coac
 
 \begin{figure}[htbp]
 \centerline{\includegraphics[scale=0.078]{iview_overview2.png}}
-\caption{Overview of the free-viewpoint system \cite{02_iview}.}
+\caption{Overview of the \textit{iview} free-viewpoint video system \cite{02_iview}.}
 \label{fig:iview_overview}
 \end{figure}
 
@@ -56,16 +56,15 @@ The minimal number of cameras is about four, but for good quality results a high
 Camera synchronisation is achieved using standard genlock process.
 
 The processing module computes a 3D model of the scene.
-This is done using segmentation of objects from the back-
-ground and 3D reconstruction \cite{2.1_iview}.
+This is done using segmentation of objects from the background and 3D reconstruction \cite{2.1_iview}.
 
-In order to allow the use of footage from match cameras and to avoid the need for prior calibration, 
-automatic calibration of all cameras is performed using a line-based approach againts the pitch lines of the captured footage, 
+To allow the use of footage from match cameras and to avoid the need for prior calibration, 
+automatic calibration of all cameras is performed using a line-based approach against the pitch lines of the captured footage, 
 achieving a root-mean-square error of 1-2 pixels for moving cameras. 
 The calibration is very fast and robust, capable of real-time operation for use during live match footage. 
 Calibration estimates the extrinsic and intrinsic parameters of each camera including lens distortion.
 
-The segmentation is needed to separate the foreground, i.e. the players from the background.
+The segmentation is needed to separate the foreground, i.e., the players from the background.
 Matting of players from the green pitch is performed using chroma-keying matting. 
 % This allows the approximate segmentation of the foreground players for subsequent processing to produce free-viewpoint video. 
 The authors developed and tested a k-nearest neighbour approach for chroma-keying and evaluated two other known techniques,
@@ -100,7 +99,7 @@ Cameras closer to the virtual viewpoint are chosen to generate the novel viewpoi
 The method proposed achieves an image quality comparable to that of the input images and it is robust to the
 wide-baseline moving camera views at different resolutions.
 Calibration and segmentation are very important in order to obtain an overall good quality of the system.
-Degradation in image quality will also occur if there are insufficients views for reconstruction.
+Degradation in image quality will also occur if there are insufficient views for reconstruction.
 % TODO: si può aggiungere contenuto
 
 % Aperture correction is also applied to each video sequence to correct for the camera edge enhancement
