@@ -1,5 +1,5 @@
 \section{Billboard-based visualization}
-In this section we present the work of Ohta et al. \cite{03_billboard}.
+In this section, we present the work of Ohta et al. \cite{03_billboard}.
 The authors use billboard representation to make a 3D model of each player.
 This method is simpler than full 3D reconstruction and requires less computation.
 A player billboard is a small rectangle standing perpendicular to the ground
@@ -15,7 +15,7 @@ For this reason, becomes particularly important to place player billboards at a 
 \end{figure}
 
 
-The system proceeds as follow: first extracts texture segments from camera videos, then selects appropriate textures according
+The system proceeds as follows: first it extracts texture segments from camera videos, then selects appropriate textures according
 to the virtual viewpoint and finally layouts the player billboards in virtual space.
 
 Texture extraction phase consists in obtaining the location of each player and extracting texture segments from every image 
@@ -30,8 +30,8 @@ and placed so that the texture faces the viewpoint \cite{03_billboard}.
 % TODO: completare
 
 
-One possible problem happens when players are overlapped each other at a certain camera and billboard texture could include both
-players.
+One problem may happen when players are overlapped each other at a certain camera and billboard texture might include both
+of them.
 To eliminate extra player region, authors used stereo based method \cite{03_billboard_04} as explained in \cite{03_billboard}. 
 % TODO: can be explained more
 

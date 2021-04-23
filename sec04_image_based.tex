@@ -12,7 +12,7 @@
 \label{fig:plane_sweeping2}
 \end{figure*}
 
-In this section we present the work of Goorts et al. \cite{05_plane_sweeping}, i.e., an image-based approach to generate 
+In this section, we present the work of Goorts et al. \cite{05_plane_sweeping}, i.e., an image-based approach to generate 
 virtual camera view interpolating real camera images.
 Instead of performing 3D reconstruction, image-based methods directly generate the image of the novel viewpoint.
 When multiple cameras are present, plane sweeping can be used \cite{05_plane_sweeping_yang} for both small and wide 
@@ -23,7 +23,7 @@ setups of about 1 meter.
 This method presents some problems like disappearing players
 when they overlap in the image.
 
-The method presented here is fully automatic and employ GPU
+The method presented here is fully automatic and employs GPU
 parallel processing to achieve fast processing speed.
 The system setup consists of 7 static cameras placed in a
 wide baseline setup, i.e., 10 meters between each camera.
@@ -57,7 +57,7 @@ the differences between the color values and three thresholds.
 This allows fast segmentation in high quality.
 
 
-In this way, the authors obtained high quality results using wide baseline setup and typical artifacts of normal plane sweeping, 
+Applying this method, the authors obtained high quality results using wide baseline setup and typical artifacts of normal plane sweeping, 
 such as ghost players, are removed.
 Some other artifacts can still be present, such as ghost lines, caused by the simplified assumption of the geometry of the pitch.
 % , where the
